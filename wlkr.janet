@@ -1,3 +1,5 @@
+#!/usr/bin/env janet
+
 (os/setenv "TZ" "America/New_York")
 
 (def args (dyn :args))
@@ -20,7 +22,7 @@
 
 (defn walk-dir [path]
     (each file (os/dir path)
-        (unless (string/has-suffix? "." file)
+        (unless (string/has-prefix? "." file)
             (def full-path (string path "/" file))
             (def mode (os/stat full-path :mode))
             (cond
