@@ -1,7 +1,7 @@
 (os/setenv "TZ" "America/New_York")
 
 (def args (dyn :args))
-(def targets (if (> length args) 1) (args 1) ".")
+(def target-dir (if (> length args) 1) (args 1) ".")
 
 (def time (os/strftime "%Y-%m-%d_%a_%I-%M %p" (os/time) true))
 (def output-file (string "/Users/nickstrakhov/Downloads/contents_" time ".md"))
