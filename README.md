@@ -12,6 +12,7 @@ chmod +x ~/.local/bin/wlkr
 ```
 
 Add the below to your `~/.zshrc`
+
 `export PATH="$HOME/.local/bin:$PATH"`
 
 Reload your terminal or exit and start a new session.
@@ -19,5 +20,7 @@ Reload your terminal or exit and start a new session.
 Now you can wield the power of copying a single directory or a group of directories into a markdown file to feed to llm engineering rabbis.
 
 `wlkr` - performs the scrape in current directory
+
 `wlkr ./some-silly-directory` - single directory argument, ensure you use `./` to be relative to the path
+
 `wlkr ./dir1 ./dir2` - multie directory scrape
